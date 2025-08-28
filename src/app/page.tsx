@@ -15,11 +15,11 @@ export default function Home() {
   const year = new Date().getFullYear()
 
   const imagesItems = [
-    <Image className='h-full w-full' src={card1} alt='teste' />,
-    <Image className='h-full w-full' src={card2} alt='teste' />,
-    <Image className='h-full w-full' src={card3} alt='teste' />,
-    <Image className='h-full w-full' src={card4} alt='teste' />,
-    <Image className='h-full w-full' src={card1} alt='teste' />
+    <Image key={0} className='h-full w-full' src={card1} alt='teste' />,
+    <Image key={1} className='h-full w-full' src={card2} alt='teste' />,
+    <Image key={2} className='h-full w-full' src={card3} alt='teste' />,
+    <Image key={3} className='h-full w-full' src={card4} alt='teste' />,
+    <Image key={4} className='h-full w-full' src={card1} alt='teste' />
   ]
 
   const handleActiveMsg = (index: number) => {
@@ -27,19 +27,19 @@ export default function Home() {
   }
 
   const messages = [
-    <p className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={0} className=' font-extralight text-4xl text-center sm:w-1/2'>
       Handcrafted with Love, Delivered with Care deserunt sit velit.
     </p>,
-    <p className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={1} className=' font-extralight text-4xl text-center sm:w-1/2'>
       Unique Creations for Every Occasion, Officia Elit esse
     </p>,
-    <p className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={2} className=' font-extralight text-4xl text-center sm:w-1/2'>
       Discover the Art of Handmade Excellence, deserunt sit velit
     </p>,
-    <p className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={3} className=' font-extralight text-4xl text-center sm:w-1/2'>
       From Our Hands to Your Home, with Love. Made Just for You
     </p>,
-    <p className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={4} className=' font-extralight text-4xl text-center sm:w-1/2'>
       Handcrafted Treasures, Made Just for You, with Care
     </p>
   ]

@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 export interface CardProps {
-  index: number;
-  activeIndex: number;
-  totalItems: number;
-  children?: React.ReactNode;
+  index: number
+  activeIndex: number
+  totalItems: number
+  children?: React.ReactNode
 }
 
-export default function CarouselItem({ index, activeIndex, totalItems, children }: CardProps) {
-  const [scaled, setScaled] = useState<Boolean>(false);
+export default function CarouselItem({
+  index,
+  activeIndex,
+  totalItems,
+  children
+}: CardProps) {
+  const [scaled, setScaled] = useState<boolean>(false)
 
   // Calculate circular offset to maintain equal items on both sides
-  let diff = index - activeIndex;
-  
+  let diff = index - activeIndex
+
   // Adjust for circular positioning
-  if (diff > totalItems / 2) diff -= totalItems;
-  if (diff < -totalItems / 2) diff += totalItems;
-  
-  const offset = diff / 4;
-  const direction = Math.sign(diff);
-  const absOffset = Math.abs(offset);
+  if (diff > totalItems / 2) diff -= totalItems
+  if (diff < -totalItems / 2) diff += totalItems
+
+  const offset = diff / 4
+  const direction = Math.sign(diff)
+  const absOffset = Math.abs(offset)
 
   const cssTransformProperties = `
         rotateY(calc(${offset} * 55deg))
@@ -27,29 +32,29 @@ export default function CarouselItem({ index, activeIndex, totalItems, children 
         translateX(calc( ${direction} * -3.5rem))
         translateZ(calc( ${absOffset} * -35rem))
         scale(${scaled && index === activeIndex ? 6.5 : 1})
-       `;
+       `
 
   const cssOpacity = `
-        ${Math.abs(index - activeIndex) >= 3 ? '0' : '1'}`;
+        ${Math.abs(index - activeIndex) >= 3 ? '0' : '1'}`
 
   const cssDisplay = `
         ${Math.abs(index - activeIndex) >= 3 ? 'none' : 'block'},
-  `;
+  `
 
   return (
     <div
-      className="carousel-item"
+      className='carousel-item'
       style={{
         transform: cssTransformProperties,
         opacity: cssOpacity,
         display: cssDisplay,
-        zIndex: `${scaled ? 100 : 1}`,
+        zIndex: `${scaled ? 100 : 1}`
       }}
       onClick={() => {
-        setScaled(!scaled);
+        setScaled(!scaled)
       }}
     >
       {children}
     </div>
-  );
+  )
 }
