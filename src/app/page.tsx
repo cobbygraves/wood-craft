@@ -61,7 +61,7 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center'>
-        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center flex-grow absolute bottom-[23%] xl:bottom-[6rem]'>
+        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center flex-grow absolute bottom-[14rem] xl:bottom-[6rem]'>
           <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
           <div className='flex items-center gap-x-3 mt-16 justify-center text-[var(--primary-color)]'>
