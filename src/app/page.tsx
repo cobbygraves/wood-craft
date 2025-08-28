@@ -23,11 +23,11 @@ export default function Home() {
   // ]
 
   const imagesItems = [
-    <Image className='h-full w-full' src={card1} alt='teste' />,
-    <Image className='h-full w-full' src={card2} alt='teste' />,
-    <Image className='h-full w-full' src={card3} alt='teste' />,
-    <Image className='h-full w-full' src={card4} alt='teste' />,
-    <Image className='h-full w-full' src={card1} alt='teste' />
+    <Image key={0} className='h-full w-full' src={card1} alt='teste' />,
+    <Image key={1} className='h-full w-full' src={card2} alt='teste' />,
+    <Image key={2} className='h-full w-full' src={card3} alt='teste' />,
+    <Image key={3} className='h-full w-full' src={card4} alt='teste' />,
+    <Image key={4} className='h-full w-full' src={card1} alt='teste' />
   ]
 
   const handleActiveMsg = (index: number) => {
