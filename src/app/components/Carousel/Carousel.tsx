@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import CarouselItem from './CarouselItem'
 import CarouselIndicator from './CarouselIndicator'
-import { IoIosArrowBack } from 'react-icons/io'
+// import { IoIosArrowBack } from 'react-icons/io'
 
 export interface CarouselProps {
   width?: number
@@ -12,9 +12,7 @@ export interface CarouselProps {
 }
 
 export default function Carousel({ items, setMessage }: CarouselProps) {
-  const [activeIndex, setActiveIndex] = useState<number>(
-    Math.floor(items.length / 2)
-  )
+  const [activeIndex, setActiveIndex] = useState<number>(2)
 
   useEffect(() => {
     const interval = setInterval(() => {

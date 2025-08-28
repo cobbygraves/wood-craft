@@ -14,6 +14,14 @@ export default function Home() {
   const [active, setActive] = useState(0)
   const year = new Date().getFullYear()
 
+  const bgImages = [
+    'url(../../card1.svg)',
+    'url(../../card2.svg)',
+    'url(../../card3.svg)',
+    'url(../../card4.svg)',
+    'url(../../card1.svg)'
+  ]
+
   const imagesItems = [
     <Image key={0} className='h-full w-full' src={card1} alt='teste' />,
     <Image key={1} className='h-full w-full' src={card2} alt='teste' />,
@@ -44,16 +52,19 @@ export default function Home() {
     </p>
   ]
   return (
-    <div className='banner min-w-full h-screen overflow-hidden flex flex-col'>
+    <div
+      className='banner min-w-full h-screen overflow-hidden flex flex-col'
+      style={{ backgroundImage: bgImages[active] }}
+    >
       <div className='mt-[235px] px-7 flex justify-center'>
         {messages[active]}
       </div>
 
       <div className='flex justify-center'>
-        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center flex-grow absolute bottom-[37%] xl:bottom-[7rem]'>
+        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center flex-grow absolute bottom-[23%] xl:bottom-[6rem]'>
           <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
-          <div className='flex items-center gap-x-3 mt-10 justify-center text-[var(--primary-color)]'>
+          <div className='flex items-center gap-x-3 mt-16 justify-center text-[var(--primary-color)]'>
             <a href='#'>
               <FaFacebookF size={25} />
             </a>
@@ -64,6 +75,10 @@ export default function Home() {
               <FaTiktok size={25} />
             </a>
           </div>
+          {/* Todo */}
+          <a className=' mt-10 lg:hidden bg-[var(--primary-color)] text-[var(--background-color)] rounded-3xl hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center p-3 w-fit border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)]'>
+            Explore The Shop Here!
+          </a>
         </div>
       </div>
 
