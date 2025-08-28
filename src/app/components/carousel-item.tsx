@@ -50,9 +50,9 @@ export default function CarouselItem({
         display: cssDisplay,
         zIndex: `${scaled ? 100 : 1}`
       }}
-      onClick={() => {
-        setScaled(!scaled)
-      }}
+      // onClick={() => {
+      //   setScaled(!scaled)
+      // }}
     >
       {children}
     </div>

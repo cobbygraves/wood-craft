@@ -24,7 +24,7 @@ function DesktopNavbar() {
       </div>
 
       <div className='flex items-center gap-x-2 py-5 justify-between'>
-        <a className='bg-[var(--primary-color)] text-[var(--background-color)] rounded-3xl hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 w-full border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'>
+        <a className='bg-[var(--primary-color)] text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 w-full border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'>
           EXPLORE THE SHOP HERE
         </a>
         <div className='flex items-center gap-x-3'>
