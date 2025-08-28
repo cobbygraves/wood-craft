@@ -23,11 +23,11 @@ export default function Home() {
   // ]
 
   const imagesItems = [
-    <Image key={0} className='h-full w-full' src={card1} alt='teste' />,
-    <Image key={1} className='h-full w-full' src={card2} alt='teste' />,
-    <Image key={2} className='h-full w-full' src={card3} alt='teste' />,
-    <Image key={3} className='h-full w-full' src={card4} alt='teste' />,
-    <Image key={4} className='h-full w-full' src={card1} alt='teste' />
+    <Image className='h-full w-full' src={card1} alt='teste' />,
+    <Image className='h-full w-full' src={card2} alt='teste' />,
+    <Image className='h-full w-full' src={card3} alt='teste' />,
+    <Image className='h-full w-full' src={card4} alt='teste' />,
+    <Image className='h-full w-full' src={card1} alt='teste' />
   ]
 
   const handleActiveMsg = (index: number) => {
@@ -35,33 +35,26 @@ export default function Home() {
   }
 
   const messages = [
-    <p key={0} className=' font-extralight text-5xl text-center sm:w-1/2'>
-      Handcrafted with Love, Delivered right with stress.
-    </p>,
-    <p key={1} className='font-extralight text-5xl text-center sm:w-1/2'>
-      Unique Creations for Every Occass for Delivered again.
-    </p>,
-    <p key={2} className='font-extralight text-5xl text-center sm:w-1/2'>
-      Discover the Art of Handmade Excel top Delivered right.
-    </p>,
-    <p key={3} className='font-extralight text-5xl text-center sm:w-1/2'>
-      From Our Hands to Your Home, with every Creations for.
-    </p>,
-    <p key={4} className='font-extralight text-5xl text-center sm:w-1/2'>
-      Handcrafted Treas, Made Just the name Hands to you.
-    </p>
+    '  Handcrafted with Love, Delivered right with stress.',
+
+    '  Unique Creations for Every Occass for Delivered again.',
+
+    '  Discover the Art of Handmade Excel top Delivered right.',
+
+    ' From Our Hands to Your Home, with every Creations for.',
+
+    ' Handcrafted Treas, Made Just the name Hands to you.'
   ]
   return (
     <div
-      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[55%] sm:pt-[16%]'
+      className='banner min-w-full h-screen overflow-hidden flex flex-col'
       // style={{ backgroundImage: bgImages[active] }}
     >
-      <div className=' mb-5 px-5 flex justify-center text-3xl'>
-        {messages[active]}
-      </div>
-
-      <div className='flex justify-center'>
-        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center'>
+      <div className='flex justify-center h-full'>
+        <div className='w-[85%] lg:w-full flex flex-col items-center justify-end relative bottom-24 h-full'>
+          <div className=' mb-5 px-5 flex font-extralight text-5xl text-center mx-auto sm:w-1/2'>
+            {messages[active].toUpperCase()}
+          </div>
           <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
           <div className='flex items-center gap-x-3 mt-12 justify-center text-[var(--primary-color)]'>
