@@ -35,28 +35,28 @@ export default function Home() {
   }
 
   const messages = [
-    <p key={0} className=' font-semibold text-4xl text-center sm:w-1/2'>
-      Handcrafted with Love, Delivered.
+    <p key={0} className=' font-extralight text-5xl text-center sm:w-1/2'>
+      Handcrafted with Love, Delivered right with stress.
     </p>,
-    <p key={1} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Unique Creations for Every Occass.
+    <p key={1} className='font-extralight text-5xl text-center sm:w-1/2'>
+      Unique Creations for Every Occass for Delivered again.
     </p>,
-    <p key={2} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Discover the Art of Handmade Exce.
+    <p key={2} className='font-extralight text-5xl text-center sm:w-1/2'>
+      Discover the Art of Handmade Excel top Delivered right.
     </p>,
-    <p key={3} className='font-semibold text-4xl text-center sm:w-1/2'>
-      From Our Hands to Your Home, with.
+    <p key={3} className='font-extralight text-5xl text-center sm:w-1/2'>
+      From Our Hands to Your Home, with every Creations for.
     </p>,
-    <p key={4} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Handcrafted Treasures, Made Just.
+    <p key={4} className='font-extralight text-5xl text-center sm:w-1/2'>
+      Handcrafted Treas, Made Just the name Hands to you.
     </p>
   ]
   return (
     <div
-      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[185px]'
+      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[50%] sm:pt-[15%]'
       // style={{ backgroundImage: bgImages[active] }}
     >
-      <div className=' mb-10 px-7 flex justify-center font-bold'>
+      <div className=' mb-5 px-5 flex justify-center text-3xl'>
         {messages[active]}
       </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
         <div className='w-[85%] lg:w-full flex flex-col items-center justify-center'>
           <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
-          <div className='flex items-center gap-x-3 mt-16 justify-center text-[var(--primary-color)]'>
+          <div className='flex items-center gap-x-3 mt-12 justify-center text-[var(--primary-color)]'>
             <a href='#'>
               <FaFacebookF size={25} />
             </a>
