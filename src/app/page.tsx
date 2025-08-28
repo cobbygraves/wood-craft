@@ -14,13 +14,13 @@ export default function Home() {
   const [active, setActive] = useState(0)
   const year = new Date().getFullYear()
 
-  const bgImages = [
-    'url(../../card1.svg)',
-    'url(../../card2.svg)',
-    'url(../../card3.svg)',
-    'url(../../card4.svg)',
-    'url(../../card1.svg)'
-  ]
+  // const bgImages = [
+  //   'url(../../card1.svg)',
+  //   'url(../../card2.svg)',
+  //   'url(../../card3.svg)',
+  //   'url(../../card4.svg)',
+  //   'url(../../card1.svg)'
+  // ]
 
   const imagesItems = [
     <Image key={0} className='h-full w-full' src={card1} alt='teste' />,
@@ -36,25 +36,25 @@ export default function Home() {
 
   const messages = [
     <p key={0} className=' font-semibold text-4xl text-center sm:w-1/2'>
-      Handcrafted with Love, Delivered with.
+      Handcrafted with Love, Delivered.
     </p>,
     <p key={1} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Unique Creations for Every Occasion.
+      Unique Creations for Every Occass.
     </p>,
     <p key={2} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Discover the Art of Handmade Excellence.
+      Discover the Art of Handmade Exce.
     </p>,
     <p key={3} className='font-semibold text-4xl text-center sm:w-1/2'>
-      From Our Hands to Your Home, with Love.
+      From Our Hands to Your Home, with.
     </p>,
     <p key={4} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Handcrafted Treasures, Made Just for.
+      Handcrafted Treasures, Made Just.
     </p>
   ]
   return (
     <div
       className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[185px]'
-      style={{ backgroundImage: bgImages[active] }}
+      // style={{ backgroundImage: bgImages[active] }}
     >
       <div className=' mb-10 px-7 flex justify-center font-bold'>
         {messages[active]}
