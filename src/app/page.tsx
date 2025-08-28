@@ -36,16 +36,16 @@ export default function Home() {
 
   const messages = [
     <p key={0} className=' font-semibold text-4xl text-center sm:w-1/2'>
-      Handcrafted with Love, Delivered with Care deserunt sit velit.
+      Handcrafted with Love, Delivered with Care.
     </p>,
     <p key={1} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Unique Creations for Every Occasion, Officia Elit esse
+      Unique Creations for Every Occasion, Officia Elit
     </p>,
     <p key={2} className='font-semibold text-4xl text-center sm:w-1/2'>
-      Discover the Art of Handmade Excellence, deserunt sit velit
+      Discover the Art of Handmade Excellence, deserunt
     </p>,
     <p key={3} className='font-semibold text-4xl text-center sm:w-1/2'>
-      From Our Hands to Your Home, with Love. Made Just for You
+      From Our Hands to Your Home, with Love. Made Just
     </p>,
     <p key={4} className='font-semibold text-4xl text-center sm:w-1/2'>
       Handcrafted Treasures, Made Just for You, with Care
