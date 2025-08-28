@@ -56,7 +56,7 @@ export default function Home() {
       className='banner min-w-full h-screen overflow-hidden flex flex-col'
       style={{ backgroundImage: bgImages[active] }}
     >
-      <div className='mt-[235px] px-7 flex justify-center'>
+      <div className='mt-[200px] px-7 flex justify-center font-bold'>
         {messages[active]}
       </div>
 
