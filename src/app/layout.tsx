@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Alumni_Sans_Pinstripe, Gruppo } from 'next/font/google'
+import { Gruppo } from 'next/font/google'
 import './globals.css'
 import DesktopNavbar from './components/desktop-navbar'
 import MobileNavbar from './components/mobile-navbar'
