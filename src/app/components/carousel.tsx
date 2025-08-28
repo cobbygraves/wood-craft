@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import CarouselItem from './CarouselItem'
-import CarouselIndicator from './CarouselIndicator'
+import CarouselItem from './carousel-item'
+import CarouselIndicator from './carousel-indicator'
 // import { IoIosArrowBack } from 'react-icons/io'
 
 export interface CarouselProps {
