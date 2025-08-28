@@ -53,7 +53,7 @@ export default function Home() {
   ]
   return (
     <div
-      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[50%] sm:pt-[15%]'
+      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[55%] sm:pt-[16%]'
       // style={{ backgroundImage: bgImages[active] }}
     >
       <div className=' mb-5 px-5 flex justify-center text-3xl'>
