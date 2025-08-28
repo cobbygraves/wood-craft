@@ -53,15 +53,15 @@ export default function Home() {
   ]
   return (
     <div
-      className='banner min-w-full h-screen overflow-hidden flex flex-col'
+      className='banner min-w-full h-screen overflow-hidden flex flex-col pt-[185px]'
       style={{ backgroundImage: bgImages[active] }}
     >
-      <div className='mt-[200px] px-7 flex justify-center font-bold'>
+      <div className=' mb-10 px-7 flex justify-center font-bold'>
         {messages[active]}
       </div>
 
       <div className='flex justify-center'>
-        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center flex-grow absolute bottom-[14rem] xl:bottom-[6rem]'>
+        <div className='w-[85%] lg:w-full flex flex-col items-center justify-center'>
           <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
           <div className='flex items-center gap-x-3 mt-16 justify-center text-[var(--primary-color)]'>
