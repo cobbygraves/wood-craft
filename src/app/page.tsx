@@ -35,19 +35,19 @@ export default function Home() {
   }
 
   const messages = [
-    <p key={0} className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={0} className=' font-semibold text-4xl text-center sm:w-1/2'>
       Handcrafted with Love, Delivered with Care deserunt sit velit.
     </p>,
-    <p key={1} className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={1} className='font-semibold text-4xl text-center sm:w-1/2'>
       Unique Creations for Every Occasion, Officia Elit esse
     </p>,
-    <p key={2} className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={2} className='font-semibold text-4xl text-center sm:w-1/2'>
       Discover the Art of Handmade Excellence, deserunt sit velit
     </p>,
-    <p key={3} className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={3} className='font-semibold text-4xl text-center sm:w-1/2'>
       From Our Hands to Your Home, with Love. Made Just for You
     </p>,
-    <p key={4} className=' font-extralight text-4xl text-center sm:w-1/2'>
+    <p key={4} className='font-semibold text-4xl text-center sm:w-1/2'>
       Handcrafted Treasures, Made Just for You, with Care
     </p>
   ]
