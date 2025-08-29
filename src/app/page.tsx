@@ -45,7 +45,7 @@ export default function Home() {
       <div className='banner min-w-full h-screen overflow-hidden flex flex-col'>
         <div className='flex justify-center h-full'>
           <div className='w-[85%] lg:w-full flex flex-col items-center justify-end relative bottom-24 h-full'>
-            <div className=' mb-5 px-5 flex font-extralight text-3xl sm:text-5xl text-center sm:w-1/2'>
+            <div className=' mb-5 px-5 flex font-extralight text-3xl sm:text-4xl text-center sm:w-2/3 xl:w-1/2'>
               {messages[active].toUpperCase()}
             </div>
             <Carousel items={imagesItems} setMessage={handleActiveMsg} />
