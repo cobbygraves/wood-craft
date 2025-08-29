@@ -10,6 +10,7 @@ import card3 from '../../public/card3.svg'
 import card4 from '../../public/card4.svg'
 import Image from 'next/image'
 import Welcome from './components/welcome'
+import Link from 'next/link'
 
 export default function Home() {
   const [active, setActive] = useState(0)
@@ -61,9 +62,12 @@ export default function Home() {
               </a>
             </div>
             {/* Todo */}
-            <a className=' mt-10 lg:hidden bg-[var(--primary-color)] text-[var(--background-color)] rounded-3xl hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center p-3 w-fit border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)]'>
+            <Link
+              href='/shop'
+              className=' mt-10 lg:hidden bg-[var(--primary-color)] text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center p-3 w-fit border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)]'
+            >
               Explore The Shop Here!
-            </a>
+            </Link>
           </div>
         </div>
 
