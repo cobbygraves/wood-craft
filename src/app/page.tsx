@@ -9,7 +9,7 @@ import card2 from '../../public/card2.svg'
 import card3 from '../../public/card3.svg'
 import card4 from '../../public/card4.svg'
 import Image from 'next/image'
-import Welcome from './components/welcome'
+// import Welcome from './components/welcome'
 import Link from 'next/link'
 
 export default function Home() {
@@ -29,28 +29,43 @@ export default function Home() {
   }
 
   const messages = [
-    '  Handcrafted with Love, Delivered right with stress.',
+    '  Handcrafted with Love, Delivered right with you.',
 
-    '  Unique Creations for Every Occass for Delivered again.',
+    '  Unique Creations for Every Occass for Delivered.',
 
-    '  Discover the Art of Handmade Excel top Delivered right.',
+    '  Discover the Art of Handmade Excel top Delivered.',
 
-    ' From Our Hands to Your Home, with every Creations for.',
+    ' From Our Hands to Your Home, with every Creations.',
 
     ' Handcrafted Treas, Made Just the name Hands to you.'
   ]
   return (
     <>
-      <Welcome />
+      {/* <Welcome /> */}
       <div className='banner min-w-full h-screen overflow-hidden flex flex-col'>
         <div className='flex justify-center h-full'>
-          <div className='w-[85%] lg:w-full flex flex-col items-center justify-end relative bottom-24 h-full'>
-            <div className=' mb-5 px-5 flex font-extralight text-3xl sm:text-4xl text-center sm:w-2/3 xl:w-1/2'>
+          <div className='w-[85%] lg:w-full flex flex-col items-center justify-center sm:justify-start mt-0 sm:mt-[13rem] relative bottom-24 h-full'>
+            <div className=' mb-5 px-5 flex font-extralight text-xl sm:text-[1.7rem] text-center sm:w-2/3 xl:w-1/2'>
               {messages[active].toUpperCase()}
             </div>
             <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
-            <div className='flex items-center gap-x-3 mt-12 justify-center text-[var(--primary-color)]'>
+            <div className='flex justify-center gap-2 items-center mt-12 w-full'>
+              <Link
+                href='/shop'
+                className='bg-[var(--primary-color)] w-fit text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'
+              >
+                Explore The Shop Here!
+              </Link>
+              <Link
+                href='/about'
+                className='bg-[var(--primary-color)] w-fit text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'
+              >
+                About Us
+              </Link>
+            </div>
+
+            <div className='flex items-center gap-x-3 mt-5 justify-center text-[var(--primary-color)]'>
               <a href='#'>
                 <FaFacebookF size={25} />
               </a>
@@ -62,12 +77,9 @@ export default function Home() {
               </a>
             </div>
             {/* Todo */}
-            <Link
-              href='/shop'
-              className=' mt-10 lg:hidden bg-[var(--primary-color)] text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center p-3 w-fit border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)]'
-            >
-              Explore The Shop Here!
-            </Link>
+            <small className='text-[var(--primary-color)] mt-3 text-xl font-semibold text-center'>
+              Handmade wooden items with zero dyes or stains
+            </small>
           </div>
         </div>
 
