@@ -17,7 +17,7 @@ function TopCategory() {
         <Link
           href={category.path}
           key={index}
-          className='text-[var(--secondary-color)] font-semibold text-lg hover:text-[var(--primary-color)] transition duration-300 text-nowrap'
+          className='text-[var(--primary-color)] font-semibold text-lg hover:text-[var(--secondary-color)] transition duration-300 text-nowrap'
         >
           {category.name}
           {index !== categories.length - 1 && <span className='mx-2'>|</span>}
