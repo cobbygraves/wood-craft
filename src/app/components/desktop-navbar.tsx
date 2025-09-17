@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function DesktopNavbar() {
   return (
-    <div className='px-5 lg:flex items-center justify-between fixed top-0 left-0 right-0 z-20 hidden'>
+    <div className='sm:px-[7rem] lg:flex items-center justify-between fixed top-0 left-0 right-0 z-20 hidden bg-white'>
       <ul className='px-5 text-lg flex gap-x-5 items-center font-bold'>
         <li>
           <Link href='/'>HOME</Link>
