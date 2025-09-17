@@ -16,13 +16,13 @@ export const MobilieNavbar = () => {
     <div
       className={` ${
         showMenu &&
-        'h-screen overflow-hidden  text-[var(--primary-color)] absolute z-50 w-full md:hidden'
+        'h-screen overflow-hidden  text-[var(--primary-color)] absolute z-20 w-full md:hidden'
       }`}
     >
       <div
         className={`text-[var(--primary-color)] px-5 h-[75px] flex items-center justify-between fixed top-0 left-0 right-0 z-20 md:hidden ${
           showMenu && 'text-[var(--primary-color)]'
-        }`}
+        } bg-white`}
       >
         <Link href='/'>
           <img src='3x3.webp' alt='KCrafts Logo' className='h-13 w-13' />
