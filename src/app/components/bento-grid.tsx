@@ -1,0 +1,76 @@
+import React from 'react'
+import Product from './Product'
+
+interface ProductModel {
+  image: string
+  name: string
+  price: string | number
+}
+
+interface Props {
+  products: ProductModel[]
+  // number of columns on large screens (default 4)
+  columns?: number
+  gap?: number
+}
+
+/*
+  Simple pattern-driven bento grid:
+  - Uses Tailwind CSS grid with manual col/row spans for items by index.
+  - Pattern repeats as needed.
+  - Adjust the pattern to taste (bigger items first, etc).
+*/
+export default function BentoGrid({ products, columns = 4, gap = 4 }: Props) {
+  // Pattern of {col,row} spans for the repeating bento layout.
+  // Tailwind classes like `col-span-2 row-span-2`
+  const pattern = [
+    { c: 2, r: 2 }, // large
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
+    { c: 2, r: 1 }, // medium wide
+    { c: 1, r: 2 }, // tall
+    { c: 1, r: 1 } // small
+  ]
+
+  const getSpanClass = (index: number) => {
+    const p = pattern[index % pattern.length]
+    const col = Math.max(1, Math.min(columns, p.c))
+    const row = Math.max(1, p.r)
+    return `col-span-${col} row-span-${row}`
+  }
+
+  // grid-auto-rows will determine the base height. Adjust as needed.
+  // Using `md:grid-cols-${columns}` via inline style is trickier; use responsive Tailwind classes below
+  // For dynamic columns you can change the `grid-cols-4` part in the parent usage.
+  return (
+    <div
+      className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-${columns} gap-5 auto-rows-[10rem]`}
+    >
+      {products.map((p, i) => {
+        // guard missing url or id
+        if (!p || !p.image) return null
+        const span = getSpanClass(i)
+        // grid item must be the container with the span class
+        return (
+          <div key={p.name ?? i} className={`${span} w-full h-full`}>
+            {/* product receives no span class; its wrapper inside uses position:relative and fills */}
+            <Product
+              id={p.name}
+              url={p.image}
+              alt={p.name ?? p.name}
+              name={p.name}
+              price={p.price}
+              // Optional: tell Product about size preference via variant
+              variant={
+                pattern[i % pattern.length].c >= 2 &&
+                pattern[i % pattern.length].r >= 2
+                  ? 'large'
+                  : 'small'
+              }
+            />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
