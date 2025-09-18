@@ -12,7 +12,7 @@ function TopCategory() {
     { name: 'Bowls', path: '/shop/bowls' }
   ]
   return (
-    <div className='overflow-x-scroll sm:overflow-x-hidden whitespace-nowrap mb-5 pt-[100px] relative z-10'>
+    <div className='overflow-x-scroll sm:overflow-x-hidden whitespace-nowrap mb-5 pt-[100px] relative z-10 '>
       {categories.map((category, index) => (
         <Link
           href={category.path}

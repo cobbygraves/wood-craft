@@ -5,11 +5,6 @@ export const productsData = [
     image: 'african hall.jpg'
   },
   {
-    name: 'Dinning Table',
-    price: '1250',
-    image: 'dinningTable.jpg'
-  },
-  {
     name: 'Double Vase',
     price: '450',
     image: 'double vase.jpg'
@@ -25,8 +20,13 @@ export const productsData = [
     image: 'dinningTable.jpg'
   },
   {
-    name: 'Africa Hall',
+    name: 'Ghana Hall',
     price: '1000',
     image: 'african hall.jpg'
+  },
+  {
+    name: 'Master Bedroom',
+    price: '450',
+    image: 'masterbedroom.jpg'
   }
 ]
