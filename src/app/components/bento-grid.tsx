@@ -11,7 +11,6 @@ interface Props {
   products: ProductModel[]
   // number of columns on large screens (default 4)
   columns?: number
-  gap?: number
 }
 
 /*
@@ -20,7 +19,7 @@ interface Props {
   - Pattern repeats as needed.
   - Adjust the pattern to taste (bigger items first, etc).
 */
-export default function BentoGrid({ products, columns = 4, gap = 4 }: Props) {
+export default function BentoGrid({ products, columns = 4 }: Props) {
   // Pattern of {col,row} spans for the repeating bento layout.
   // Tailwind classes like `col-span-2 row-span-2`
   const pattern = [
@@ -44,7 +43,7 @@ export default function BentoGrid({ products, columns = 4, gap = 4 }: Props) {
   // For dynamic columns you can change the `grid-cols-4` part in the parent usage.
   return (
     <div
-      className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-${columns} gap-5 auto-rows-[10rem]`}
+      className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-${columns} gap-3 auto-rows-[10rem]`}
     >
       {products.map((p, i) => {
         // guard missing url or id
