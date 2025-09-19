@@ -40,10 +40,8 @@ function Product({
         priority={variant === 'large'} // optionally prioritize large tiles
       />
       <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left'>
-        <p className='font-bold text-[var(--primary-color)] text-sm truncate'>
-          {name}
-        </p>
-        <div className='font-bold text-white text-lg'>${price}</div>
+        <p className='font-bold text-white truncate'>{name}</p>
+        <div className='text-white text-lg'>${price}</div>
       </div>
     </div>
   )
