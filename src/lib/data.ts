@@ -1,6 +1,12 @@
 export const productsData = [
   {
-    name: 'Africa Hall',
+    name: 'Window Chair',
+    price: '1000',
+    image: 'windowChair.jpg'
+  },
+
+  {
+    name: 'Ghana Hall',
     price: '1000',
     image: 'african hall.jpg'
   },
@@ -10,14 +16,9 @@ export const productsData = [
     image: 'double vase.jpg'
   },
   {
-    name: 'Window Chair',
-    price: '1000',
-    image: 'windowChair.jpg'
-  },
-  {
-    name: 'Dinning Table',
-    price: '1250',
-    image: 'dinningTable.jpg'
+    name: 'Master Bedroom',
+    price: '450',
+    image: 'masterbedroom.jpg'
   },
   {
     name: 'Ghana Hall',
@@ -25,8 +26,8 @@ export const productsData = [
     image: 'african hall.jpg'
   },
   {
-    name: 'Master Bedroom',
+    name: 'Double Vase',
     price: '450',
-    image: 'masterbedroom.jpg'
+    image: 'double vase.jpg'
   }
 ]
