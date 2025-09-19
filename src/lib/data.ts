@@ -29,5 +29,16 @@ export const productsData = [
     name: 'Double Vase',
     price: '450',
     image: 'double vase.jpg'
+  },
+
+  {
+    name: 'Double Vase',
+    price: '450',
+    image: 'double vase.jpg'
+  },
+  {
+    name: 'Double Vase',
+    price: '450',
+    image: 'double vase.jpg'
   }
 ]

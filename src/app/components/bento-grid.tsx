@@ -24,7 +24,10 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
   // Tailwind classes like `col-span-2 row-span-2`
   const pattern = [
     { c: 2, r: 2 }, // large
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
     { c: 1, r: 2 }, // tall
+    { c: 1, r: 1 }, // small
     { c: 1, r: 1 } // small
   ]
 
