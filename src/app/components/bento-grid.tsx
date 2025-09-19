@@ -24,9 +24,6 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
   // Tailwind classes like `col-span-2 row-span-2`
   const pattern = [
     { c: 2, r: 2 }, // large
-    { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
-    { c: 2, r: 1 }, // medium wide
     { c: 1, r: 2 }, // tall
     { c: 1, r: 1 } // small
   ]
@@ -51,10 +48,10 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
         const span = getSpanClass(i)
         // grid item must be the container with the span class
         return (
-          <div key={p.name ?? i} className={`${span} w-full h-full`}>
+          <div key={p.image + i} className={`${span} w-full h-full`}>
             {/* product receives no span class; its wrapper inside uses position:relative and fills */}
             <Product
-              id={p.name}
+              id={i}
               url={p.image}
               alt={p.name ?? p.name}
               name={p.name}
