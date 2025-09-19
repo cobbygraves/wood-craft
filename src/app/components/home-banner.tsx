@@ -42,7 +42,7 @@ export default function HomeBanner() {
   ]
 
   return (
-    <div className='w-[85%] lg:w-full flex flex-col items-center justify-center sm:justify-start mt-0 sm:mt-[13rem] relative bottom-24 h-full'>
+    <div className='w-[85%] lg:w-full flex flex-col items-center justify-center sm:justify-start mt-0 sm:mt-[13rem] relative sm:bottom-24 h-full'>
       <div className=' mb-5 px-5 flex font-extralight text-xl sm:text-[1.7rem] text-center sm:w-2/3 xl:w-1/2'>
         {messages[active].toUpperCase()}
       </div>
