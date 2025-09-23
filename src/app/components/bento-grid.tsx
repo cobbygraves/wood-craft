@@ -28,7 +28,8 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
     { c: 1, r: 1 }, // small
     { c: 1, r: 2 }, // tall
     { c: 1, r: 1 }, // small
-    { c: 1, r: 1 } // small
+    { c: 1, r: 1 }, // small
+    { c: 2, r: 1 } // semi-large
   ]
 
   const getSpanClass = (index: number) => {
