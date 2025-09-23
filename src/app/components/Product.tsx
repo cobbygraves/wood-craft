@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { setImageSize } from '@/lib/utils'
 
 interface Props {
   id?: string | number
@@ -22,9 +21,6 @@ function Product({
   className = '',
   variant = 'medium'
 }: Props) {
-  // keep using setImageSize if you rely on it elsewhere; for grid we prefer Image fill
-  const { w, h } = setImageSize?.() ?? { w: 400, h: 300 }
-
   return (
     // The wrapper should be the grid item; we keep it flexible so BentoGrid can set spans via className
     <div
