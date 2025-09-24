@@ -12,7 +12,7 @@ export default function Home() {
 
         <div className='absolute bottom-0 left-0 right-0 bg-[var(--primary-color)] h-16 flex items-center justify-center'>
           <p className='text-center text-white font-light'>
-            &copy; {year} - KCrafts. All Rights Reserved.
+            &copy; {year} - T&uacute;ak WoodLab. All Rights Reserved.
           </p>
         </div>
       </div>

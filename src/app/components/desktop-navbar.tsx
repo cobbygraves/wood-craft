@@ -1,10 +1,11 @@
 import { LuShoppingCart } from 'react-icons/lu'
 import { CiSearch } from 'react-icons/ci'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function DesktopNavbar() {
   return (
-    <div className=' lg:flex items-center justify-between fixed top-0 left-0 right-0 z-20 hidden bg-white px-5'>
+    <div className=' lg:flex items-center justify-between fixed top-0 left-0 right-0 z-20 hidden bg-white px-5 h-[100px]'>
       <ul className='text-lg flex gap-x-5 items-center font-bold'>
         <li>
           <Link href='/'>HOME</Link>
@@ -20,11 +21,9 @@ function DesktopNavbar() {
         </li>
       </ul>
 
-      <div className='top-[0.5rem]'>
-        <img src='3x3.webp' alt='KCrafts Logo' className='h-13 w-13' />
-      </div>
+      <Image src={'/logo.png'} alt='Tuak Wood Logo' width={75} height={75} />
 
-      <div className='flex items-center gap-x-2 py-5 justify-between'>
+      <div className='flex items-center gap-x-2 justify-between'>
         {/* <a className='bg-[var(--primary-color)] text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 w-full border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'>
           EXPLORE THE SHOP HERE
         </a> */}

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props {
   id?: string | number
@@ -23,6 +24,7 @@ function Product({
 }: Props) {
   return (
     // The wrapper should be the grid item; we keep it flexible so BentoGrid can set spans via className
+
     <div
       className={`relative w-full h-full overflow-hidden bg-gray-50 ${className}`}
     >
@@ -35,9 +37,16 @@ function Product({
         className='object-cover'
         priority={variant === 'large'} // optionally prioritize large tiles
       />
-      <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left'>
-        <p className='font-bold text-white truncate'>{name}</p>
-        <div className='text-white text-lg'>${price}</div>
+      <div className='text-white absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left'>
+        <div className='absolute right-0 bottom-0'>
+          <div className=' text-lg'>${price}</div>
+          <Link
+            href='/shop'
+            className='bg-[var(--primary-color)] w-fit text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'
+          >
+            View Details
+          </Link>
+        </div>
       </div>
     </div>
   )
