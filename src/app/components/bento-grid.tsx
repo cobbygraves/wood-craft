@@ -27,19 +27,12 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
     { c: 2, r: 2 }, // large
     { c: 1, r: 1 }, // small
     { c: 1, r: 1 }, // small
+
     { c: 1, r: 2 }, // tall
     { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
+
     { c: 1, r: 2 }, // tall
     { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
-    { c: 2, r: 2 }, // large
-    { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
-    { c: 1, r: 1 }, // small
-    { c: 2, r: 2 }, // large
-    { c: 1, r: 2 }, // tall
     { c: 1, r: 1 }, // small
     { c: 1, r: 1 } // small
   ]
@@ -54,7 +47,7 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
   // grid-auto-rows determines the base height; increase for a taller card look.
   // Keep responsive columns; parent can override columns prop.
   return (
-    <div className={`grid grid-cols-2 sm:grid-cols-5 gap-4 auto-rows-[12rem]`}>
+    <div className={`grid grid-cols-2 sm:grid-cols-4 gap-4 auto-rows-[20rem]`}>
       {products.map((p, i) => {
         // guard missing url or id
         if (!p || !p.image) return null
