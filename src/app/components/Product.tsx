@@ -37,7 +37,7 @@ function Product({
         className='object-cover'
         priority={variant === 'large'} // optionally prioritize large tiles
       />
-      <div className='text-white absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left'>
+      <div className='text-white font-extrabold absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent py-10 px-3 text-left'>
         <div className='absolute right-0 bottom-0'>
           <div className=' text-lg'>${price}</div>
           <Link
