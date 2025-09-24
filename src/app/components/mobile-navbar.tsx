@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { CiMenuBurger } from 'react-icons/ci'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const MobilieNavbar = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -25,13 +26,20 @@ export const MobilieNavbar = () => {
         } bg-white`}
       >
         <Link href='/'>
-          <img src='3x3.webp' alt='KCrafts Logo' className='h-13 w-13' />
+          {/* <img src='logo.png' alt='KCrafts Logo' className='h-20 w-20' /> */}
+          <Image
+            className=''
+            src={'/logo.png'}
+            alt='Tuak Wood Logo'
+            width={50}
+            height={50}
+          />
         </Link>
 
         {showMenu ? (
-          <AiOutlineClose onClick={toggleMenu} className='h-10 w-10' />
+          <AiOutlineClose onClick={toggleMenu} className='h-7 w-7' />
         ) : (
-          <CiMenuBurger className='h-10 w-10' onClick={toggleMenu} />
+          <CiMenuBurger className='h-7 w-7' onClick={toggleMenu} />
         )}
       </div>
     </div>
