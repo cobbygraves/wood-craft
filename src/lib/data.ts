@@ -110,5 +110,37 @@ export const productsData = [
     image: 'DiaryBanner.jpg',
     description:
       'Et ea et amet nulla incididunt. Quis do dolor aliquip ullamco voluptate aliquip id adipisicing ullamco. Pariatur '
+  },
+  {
+    id: 15,
+    name: 'Diary Banner',
+    price: '2000',
+    image: 'DiaryBanner.jpg',
+    description:
+      'Et ea et amet nulla incididunt. Quis do dolor aliquip ullamco voluptate aliquip id adipisicing ullamco. Pariatur '
+  },
+  {
+    id: 16,
+    name: 'Red Decor',
+    price: '4150',
+    image: 'redDecor.jpg',
+    description:
+      'Aute ut culpa mollit aute. Id reprehenderit fugiat laboris exercitation. Ad culpa Lorem velit cupidatat cillum excepteur '
+  },
+  {
+    id: 17,
+    name: 'Africa Hall',
+    price: '5000',
+    image: 'african hall.jpg',
+    description:
+      'Cillum nostrud ad culpa amet commodo mollit consequat ex occaecat esse cillum velit aliqua. Veniam ea sunt do '
+  },
+  {
+    id: 18,
+    name: 'Window Chair',
+    price: '1000',
+    image: 'windowChair.jpg',
+    description:
+      'Nostrud velit incididunt sint dolor anim ea quis consectetur nulla. Velit nostrud cupidatat elit pariatur non aliquip'
   }
 ]

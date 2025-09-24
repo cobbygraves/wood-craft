@@ -4,6 +4,7 @@ import Product from './Product'
 interface ProductModel {
   image: string
   name: string
+  description: string
   price: string | number
 }
 
@@ -29,7 +30,18 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
     { c: 1, r: 2 }, // tall
     { c: 1, r: 1 }, // small
     { c: 1, r: 1 }, // small
-    { c: 2, r: 1 } // semi-large
+    { c: 1, r: 2 }, // tall
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
+    { c: 2, r: 2 }, // large
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 }, // small
+    { c: 2, r: 2 }, // large
+    { c: 1, r: 2 }, // tall
+    { c: 1, r: 1 }, // small
+    { c: 1, r: 1 } // small
   ]
 
   const getSpanClass = (index: number) => {
@@ -39,13 +51,10 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
     return `col-span-${col} row-span-${row}`
   }
 
-  // grid-auto-rows will determine the base height. Adjust as needed.
-  // Using `md:grid-cols-${columns}` via inline style is trickier; use responsive Tailwind classes below
-  // For dynamic columns you can change the `grid-cols-4` part in the parent usage.
+  // grid-auto-rows determines the base height; increase for a taller card look.
+  // Keep responsive columns; parent can override columns prop.
   return (
-    <div
-      className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-${columns} gap-3 auto-rows-[10rem]`}
-    >
+    <div className={`grid grid-cols-2 sm:grid-cols-5 gap-4 auto-rows-[12rem]`}>
       {products.map((p, i) => {
         // guard missing url or id
         if (!p || !p.image) return null
@@ -59,6 +68,7 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
               url={p.image}
               alt={p.name ?? p.name}
               name={p.name}
+              description={p.description}
               price={p.price}
               // Optional: tell Product about size preference via variant
               variant={
