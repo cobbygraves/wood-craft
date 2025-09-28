@@ -39,14 +39,17 @@ function Product({
           className='object-cover transition-transform duration-300 group-hover:scale-105'
           priority={variant === 'large'}
         />
+        <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-7'></div>
       </div>
 
       {/* Caption area */}
-      <div className='py-2 bg-white text-left'>
-        <h3 className='text-sm font-semibold text-gray-900'>{name}</h3>
-        {price !== undefined && (
-          <div className='text-xs text-gray-500 mt-1'>${price}</div>
-        )}
+      <div className='py-2 bg-white text-left px-1'>
+        <div className='flex justify-between items-center font-semibold'>
+          <h3 className='text-sm text-gray-900'>{name}</h3>
+          {price !== undefined && (
+            <div className='text-xs text-gray-500 mt-1'>${price}</div>
+          )}
+        </div>
 
         {description !== undefined && (
           <p className='text-xs text-gray-500 mt-1'>{description}</p>
