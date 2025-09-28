@@ -1,23 +1,22 @@
 import mongoose, { Document, Model, Schema } from 'mongoose'
 
-export interface IProduct extends Document {
-  title: string
-  price: number
-  productUrl?: string
-  description?: string
+export interface Product extends Document {
+  image: string
+  name: string
+  description: string
+  price: string | number
   createdAt: Date
 }
 
-const ProductSchema = new Schema<IProduct>({
-  title: { type: String, required: true },
+const ProductSchema = new Schema<Product>({
   price: { type: Number, required: true },
   description: String,
-  productUrl: String,
+  image: String,
   createdAt: { type: Date, default: () => new Date() }
 })
 
 // Guard against model recompilation during HMR
-const Product: Model<IProduct> =
-  mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema)
+const ProductModel: Model<Product> =
+  mongoose.models.Product || mongoose.model<Product>('Product', ProductSchema)
 
-export default Product
+export default ProductModel
