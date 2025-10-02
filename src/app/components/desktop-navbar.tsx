@@ -65,8 +65,8 @@ function DesktopNavbar() {
             <span className='relative bottom-1.5'>2</span>
           </div>
         </div> */}
-        {pathname === '/' && (
-          <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-1'>
+        {pathname !== '/shop' && (
+          <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[1.2rem]'>
             Call Us: (+233) 241 985 898
           </p>
         )}
