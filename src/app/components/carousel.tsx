@@ -13,6 +13,19 @@ export interface CarouselProps {
 
 export default function Carousel({ items, setMessage }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState<number>(2)
+  const [visibleDistance, setVisibleDistance] = useState<number>(2)
+
+  // Track viewport width to change how many neighbors are visible on mobile
+  useEffect(() => {
+    function update() {
+      if (typeof window === 'undefined') return
+      setVisibleDistance(window.innerWidth <= 640 ? 1 : 2)
+    }
+
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,50 +38,19 @@ export default function Carousel({ items, setMessage }: CarouselProps) {
     setMessage(activeIndex)
   }, [activeIndex, setMessage])
 
-  // function handleNextItemBtn() {
-  //   setActiveIndex((prev) => {
-  //     return prev + 1 < items.length ? prev + 1 : prev
-  //   })
-  // }
-
-  // function handlePrevItemBtn() {
-  //   setActiveIndex((prev) => {
-  //     return prev - 1 >= 0 ? prev - 1 : prev
-  //   })
-  // }
-
   return (
     <div className='carousel-container'>
-      {/* {activeIndex > 0 && (
-        <button
-          className='carousel-btn-switch-card-left carousel-btn-switch-card'
-          onClick={handlePrevItemBtn}
-        >
-          <IoIosArrowBack />
-        </button>
-      )} */}
       {items?.map((item, index) => (
         <CarouselItem
           key={index}
           index={index}
           activeIndex={activeIndex}
           totalItems={items.length}
+          visibleDistance={visibleDistance}
         >
           {item}
         </CarouselItem>
       ))}
-      {/* {activeIndex < items.length - 1 && (
-        <button
-          className='carousel-btn-switch-card-right carousel-btn-switch-card'
-          onClick={handleNextItemBtn}
-        >
-          <IoIosArrowBack
-            style={{
-              transform: 'rotate(180deg)'
-            }}
-          />
-        </button>
-      )} */}
 
       <CarouselIndicator
         activeIndex={activeIndex}
