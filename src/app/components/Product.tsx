@@ -49,9 +49,11 @@ function Product({
       {/* Caption area */}
       <div className='py-2 bg-white text-left px-1'>
         <div className='flex justify-between items-center font-semibold'>
-          <h3 className='text-sm text-gray-900'>{name}</h3>
+          <h3 className='text-sm text-[var(--primary-color)]'>{name}</h3>
           {price !== undefined && (
-            <div className='text-xs text-gray-500 mt-1'>${price}</div>
+            <div className='text-xs text-[var(--primary-color)] mt-1 font-semibold'>
+              ${price}
+            </div>
           )}
         </div>
 

@@ -56,18 +56,20 @@ function DesktopNavbar() {
           </div>
         )}
 
-        <div className='flex items-center gap-x-3'>
+        {/* <div className='flex items-center gap-x-3'>
           <div className='flex items-center gap-x-1'>
             <a href='#'>
-              {/* <i
-                className='pi pi-shopping-cart text-xl'
-                style={{ fontSize: '1.7rem' }}
-              ></i> */}
+             
               <LuShoppingCart size='2.5rem' />
             </a>
             <span className='relative bottom-1.5'>2</span>
           </div>
-        </div>
+        </div> */}
+        {pathname === '/' && (
+          <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-1'>
+            Call Us: (+233) 241 985 898
+          </p>
+        )}
       </div>
     </div>
   )

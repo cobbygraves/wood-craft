@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
-import { Gruppo } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import './globals.css'
 import DesktopNavbar from './components/desktop-navbar'
 import MobileNavbar from './components/mobile-navbar'
 
-const grouppo = Gruppo({
+// const grouppo = Gruppo({
+//   subsets: ['latin'],
+//   weight: ['400']
+// })
+
+const nunito = Nunito({
   subsets: ['latin'],
-  weight: ['400']
+  weight: ['400', '500', '600', '700', '800', '900']
 })
 
 export const metadata: Metadata = {
@@ -21,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${grouppo.className} antialiased`}>
+      <body className={`${nunito.className} antialiased`}>
         <DesktopNavbar />
         <MobileNavbar />
         {children}

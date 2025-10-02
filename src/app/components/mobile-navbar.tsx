@@ -54,15 +54,15 @@ export const MobilieNavbar = () => {
               </div>
             )}
           </div>
-          <div className='flex items-center gap-1'>
+          {/* <div className='flex items-center gap-1'>
             <LuShoppingCart size='2.5rem' />
             <span className='relative bottom-1.5'>2</span>
-          </div>
-          {/* {showMenu ? (
-            <AiOutlineClose onClick={toggleMenu} className='h-7 w-7' />
-          ) : (
-            <CiMenuBurger className='h-7 w-7' onClick={toggleMenu} />
-          )} */}
+          </div> */}
+          {pathname === '/' && (
+            <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-1'>
+              Call Us: (+233) 241 985 898
+            </p>
+          )}
         </div>
       </div>
     </div>
