@@ -38,7 +38,7 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
         return (
           <div key={p.image + i} className={`${span} w-full h-full`}>
             <Product
-              id={i}
+              id={p.id}
               url={p.image}
               alt={p.name ?? p.name}
               name={p.name}

@@ -4,6 +4,7 @@ export const productsData = [
     name: 'Dinning Table',
     price: '2750',
     image: 'dinningTable.jpg',
+    category: 'boards',
     description:
       'In cupidatat ut voluptate pariatur amet aliqua consectetur aliquip aliqua duis cupidatat Lorem. Laboris cupidatat'
   },
@@ -12,6 +13,7 @@ export const productsData = [
     name: 'Africa Hall',
     price: '5000',
     image: 'african hall.jpg',
+    category: 'trays',
     description:
       'Cillum nostrud ad culpa amet commodo mollit consequat ex occaecat esse cillum velit aliqua. Veniam ea sunt do '
   },
@@ -20,6 +22,7 @@ export const productsData = [
     name: 'Window Chair',
     price: '1000',
     image: 'windowChair.jpg',
+    category: 'laddles',
     description:
       'Nostrud velit incididunt sint dolor anim ea quis consectetur nulla. Velit nostrud cupidatat elit pariatur non aliquip'
   },
@@ -28,6 +31,7 @@ export const productsData = [
     name: 'Double Vase',
     price: '1650',
     image: 'double vase.jpg',
+    category: 'laddles',
     description:
       'Tempor et sint minim aute amet. Consequat ut ullamco duis ut mollit et tempor tempor Lorem duis. Eu duis tempor enim duis'
   },
@@ -36,6 +40,7 @@ export const productsData = [
     name: 'Master Bedroom',
     price: '4050',
     image: 'masterbedroom.jpg',
+    category: 'coasters',
     description:
       'Deserunt enim occaecat proident consequat aute ex laboris incididunt ullamco ea. Mollit deserunt nostrud cillum '
   },
@@ -44,6 +49,7 @@ export const productsData = [
     name: 'Diary Banner',
     price: '2000',
     image: 'DiaryBanner.jpg',
+    category: 'spoons',
     description:
       'Et ea et amet nulla incididunt. Quis do dolor aliquip ullamco voluptate aliquip id adipisicing ullamco. Pariatur '
   },
@@ -52,6 +58,7 @@ export const productsData = [
     name: 'Red Decor',
     price: '4150',
     image: 'redDecor.jpg',
+    category: 'bowls',
     description:
       'Aute ut culpa mollit aute. Id reprehenderit fugiat laboris exercitation. Ad culpa Lorem velit cupidatat cillum excepteur '
   },
@@ -60,6 +67,7 @@ export const productsData = [
     name: 'Vase One',
     price: '3499',
     image: 'vase1.jpg',
+    category: 'holders',
     description:
       'Est ut fugiat laborum ut do occaecat nisi. Commodo sit anim nisi eu eu ipsum. Eu fugiat est voluptate cupidatat elit aliqua '
   },
@@ -68,6 +76,7 @@ export const productsData = [
     name: 'Dinning Table',
     price: '2750',
     image: 'dinningTable.jpg',
+    category: 'boards',
     description:
       'In cupidatat ut voluptate pariatur amet aliqua consectetur aliquip aliqua duis cupidatat Lorem. Laboris cupidatat'
   },
@@ -76,6 +85,7 @@ export const productsData = [
     name: 'Africa Hall',
     price: '5000',
     image: 'african hall.jpg',
+    category: 'coasters',
     description:
       'Cillum nostrud ad culpa amet commodo mollit consequat ex occaecat esse cillum velit aliqua. Veniam ea sunt do '
   },
@@ -84,6 +94,7 @@ export const productsData = [
     name: 'Window Chair',
     price: '1000',
     image: 'windowChair.jpg',
+    category: 'holders',
     description:
       'Nostrud velit incididunt sint dolor anim ea quis consectetur nulla. Velit nostrud cupidatat elit pariatur non aliquip'
   },
@@ -92,6 +103,7 @@ export const productsData = [
     name: 'Double Vase',
     price: '1650',
     image: 'double vase.jpg',
+    category: 'spoons',
     description:
       'Tempor et sint minim aute amet. Consequat ut ullamco duis ut mollit et tempor tempor Lorem duis. Eu duis tempor enim duis'
   }

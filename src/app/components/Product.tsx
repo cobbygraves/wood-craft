@@ -16,6 +16,7 @@ interface Props {
 }
 
 function Product({
+  id,
   url,
   alt,
   name,
@@ -27,10 +28,13 @@ function Product({
   return (
     // The wrapper is a card: image on top, caption below. BentoGrid controls the grid spans.
     <div
-      className={`flex flex-col h-full w-full bg-white overflow-hidden ${className}`}
+      className={`flex flex-col h-full w-full bg-white overflow-hidden ${className} `}
     >
       {/* Image area */}
-      <div className='relative w-full flex-1 min-h-[6rem] bg-gray-100'>
+      <Link
+        href={`product/${id}`}
+        className='relative w-full flex-1 min-h-[6rem] bg-gray-100 cursor-pointer'
+      >
         <Image
           src={`/${url}`}
           alt={alt}
@@ -40,7 +44,7 @@ function Product({
           priority={variant === 'large'}
         />
         <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-7'></div>
-      </div>
+      </Link>
 
       {/* Caption area */}
       <div className='py-2 bg-white text-left px-1'>
