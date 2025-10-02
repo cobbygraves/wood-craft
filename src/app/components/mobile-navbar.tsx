@@ -2,11 +2,15 @@
 import { useState } from 'react'
 import { CiMenuBurger } from 'react-icons/ci'
 import { AiOutlineClose } from 'react-icons/ai'
+import { usePathname } from 'next/navigation'
+import { CiSearch } from 'react-icons/ci'
 import Link from 'next/link'
 import Image from 'next/image'
+import { LuShoppingCart } from 'react-icons/lu'
 
 export const MobilieNavbar = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const pathname = usePathname() || '/'
   const searchProduct = () => {
     console.log('navigating to product search page')
   }
@@ -35,12 +39,31 @@ export const MobilieNavbar = () => {
             height={50}
           />
         </Link>
-
-        {showMenu ? (
-          <AiOutlineClose onClick={toggleMenu} className='h-7 w-7' />
-        ) : (
-          <CiMenuBurger className='h-7 w-7' onClick={toggleMenu} />
-        )}
+        <div className='flex items-center gap-2'>
+          <div className='flex justify-end items-center'>
+            {pathname === '/shop' && (
+              <div className='flex gap-x-2 items-center border-1 border-[var(--primary-color)] w-[80%]'>
+                <input
+                  type='text'
+                  placeholder='Search for products'
+                  className='w-full px-3 text-[1.2rem] focus:outline-none'
+                />
+                <button className='bg-[var(--primary-color)] text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-2'>
+                  <CiSearch className='relative  text-3xl' />
+                </button>
+              </div>
+            )}
+          </div>
+          <div className='flex items-center gap-1'>
+            <LuShoppingCart size='2.5rem' />
+            <span className='relative bottom-1.5'>2</span>
+          </div>
+          {/* {showMenu ? (
+            <AiOutlineClose onClick={toggleMenu} className='h-7 w-7' />
+          ) : (
+            <CiMenuBurger className='h-7 w-7' onClick={toggleMenu} />
+          )} */}
+        </div>
       </div>
     </div>
   )
