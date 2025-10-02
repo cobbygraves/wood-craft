@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { CiMenuBurger } from 'react-icons/ci'
 import { AiOutlineClose } from 'react-icons/ai'
+import { FaPhoneVolume } from 'react-icons/fa6'
 import { usePathname } from 'next/navigation'
 import { CiSearch } from 'react-icons/ci'
 import Link from 'next/link'
@@ -39,7 +40,7 @@ export const MobilieNavbar = () => {
             height={50}
           />
         </Link>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 justify-between'>
           <div className='flex justify-end items-center'>
             {pathname === '/shop' && (
               <div className='flex gap-x-2 items-center border-1 border-[var(--primary-color)] w-[80%]'>
@@ -59,9 +60,9 @@ export const MobilieNavbar = () => {
             <span className='relative bottom-1.5'>2</span>
           </div> */}
           {pathname !== '/shop' && (
-            <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[1.2rem]'>
-              Call Us: (+233) 241 985 898
-            </p>
+            <div className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[0.9rem] flex items-center gap-1'>
+              <FaPhoneVolume /> <span>(+233) 241 985 898</span>
+            </div>
           )}
         </div>
       </div>

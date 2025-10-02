@@ -3,6 +3,7 @@ import { LuShoppingCart } from 'react-icons/lu'
 import { CiSearch } from 'react-icons/ci'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaPhoneVolume } from 'react-icons/fa6'
 import { usePathname } from 'next/navigation'
 
 function DesktopNavbar() {
@@ -66,9 +67,9 @@ function DesktopNavbar() {
           </div>
         </div> */}
         {pathname !== '/shop' && (
-          <p className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[1.2rem]'>
-            Call Us: (+233) 241 985 898
-          </p>
+          <div className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[1.2rem] flex items-center gap-x-1'>
+            <FaPhoneVolume /> <span>(+233) 241 985 898</span>
+          </div>
         )}
       </div>
     </div>
