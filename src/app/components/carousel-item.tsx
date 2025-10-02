@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export interface CardProps {
   index: number
   activeIndex: number
   totalItems: number
+  visibleDistance?: number
   children?: React.ReactNode
 }
 
@@ -11,14 +12,13 @@ export default function CarouselItem({
   index,
   activeIndex,
   totalItems,
+  visibleDistance = 2,
   children
 }: CardProps) {
-  const [scaled, setScaled] = useState<boolean>(false)
-
   // Calculate circular offset to maintain equal items on both sides
   let diff = index - activeIndex
 
-  // Adjust for circular positioning
+  // Adjust for circular positioning (wrap-around)
   if (diff > totalItems / 2) diff -= totalItems
   if (diff < -totalItems / 2) diff += totalItems
 
@@ -26,33 +26,38 @@ export default function CarouselItem({
   const direction = Math.sign(diff)
   const absOffset = Math.abs(offset)
 
+  // Make active and immediate neighbors use the same horizontal scale so their visible widths match
+  const widthScale = Math.abs(diff) <= 1 ? 0.9 : 1
+
+  // Slightly increase horizontal offset for immediate neighbors so their reduced width doesn't overlap the active card
+  const neighborNudge = Math.abs(diff) === 1 ? 1.06 : 1
+
   const cssTransformProperties = `
-        rotateY(calc(${offset} * 55deg))
-        scaleY(calc(1 +  ${absOffset}  * -0.5))
-        translateX(calc( ${direction} * -3.5rem))
-        translateZ(calc( ${absOffset} * -35rem))
-        scale(${scaled && index === activeIndex ? 6.5 : 1})
-       `
+    rotateY(calc(${offset} * 55deg))
+    /* keep vertical scale consistent to avoid perceived size differences */
+    scaleY(1)
+    translateX(calc( ${direction} * -3.5rem * ${neighborNudge}))
+    translateZ(calc( ${absOffset} * -35rem))
+    scaleX(${widthScale})
+   `
 
-  const cssOpacity = `
-        ${Math.abs(index - activeIndex) >= 3 ? '0' : '1'}`
-
-  const cssDisplay = `
-        ${Math.abs(index - activeIndex) >= 3 ? 'none' : 'block'},
-  `
+  // Use the circular diff for opacity/display so wrap-around works properly
+  // visibleDistance controls how many neighbors on each side are visible
+  const visible = Math.abs(diff) <= visibleDistance
 
   return (
     <div
       className='carousel-item'
       style={{
         transform: cssTransformProperties,
-        opacity: cssOpacity,
-        display: cssDisplay,
-        zIndex: `${scaled ? 100 : 1}`
+        transformOrigin: 'center center',
+        transition:
+          'transform 420ms cubic-bezier(.22,.9,.3,1), opacity 320ms ease',
+        opacity: visible ? '1' : '0',
+        display: visible ? 'block' : 'none',
+        // higher zIndex for items closer to the active index
+        zIndex: `${100 - Math.abs(diff)}`
       }}
-      // onClick={() => {
-      //   setScaled(!scaled)
-      // }}
     >
       {children}
     </div>

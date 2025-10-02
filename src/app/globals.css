@@ -182,4 +182,20 @@
   .carousel-item {
     @apply absolute h-full w-full cursor-pointer overflow-hidden drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-700 ease-in-out;
   }
+
+  /* Mobile: center carousel with 10px horizontal space on each side */
+  @media (max-width: 640px) {
+    .carousel-container {
+      padding-left: 10px;
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+
+    .carousel-item {
+      left: 10px;
+      right: 10px;
+      width: auto;
+      box-sizing: border-box;
+    }
+  }
 }
