@@ -1,17 +1,21 @@
+'use client'
 import { LuShoppingCart } from 'react-icons/lu'
 import { CiSearch } from 'react-icons/ci'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 function DesktopNavbar() {
+  const pathname = usePathname() || '/'
+
   return (
     <div className=' lg:flex items-center justify-between fixed top-0 left-0 right-0 z-20 hidden bg-white px-5 h-[100px]'>
       <ul className='text-lg flex gap-x-5 items-center font-bold'>
-        <li>
+        <li className={` ${pathname === '/' ? 'underline' : ''}`}>
           <Link href='/'>HOME</Link>
         </li>
-        <li>
-          <Link href='shop'>SHOP</Link>
+        <li className={`${pathname.startsWith('/shop') ? 'underline' : ''}`}>
+          <Link href='/shop'>SHOP</Link>
         </li>
         <li>
           <a href='#'>SERVICES</a>

@@ -1,27 +1,31 @@
-import Link from 'next/link'
 import React from 'react'
 
-function TopCategory() {
+interface Props {
+  loadCategory: (type: string) => void
+}
+
+function TopCategory({ loadCategory }: Props) {
   const categories = [
-    { name: 'Cutting Boards', path: '/shop/cutting-boards' },
-    { name: 'Serving Trays', path: '/shop/serving-trays' },
-    { name: 'Coasters', path: '/shop/coasters' },
-    { name: 'Laddles', path: '/shop/laddles' },
-    { name: 'Holders', path: '/shop/holders' },
-    { name: 'Spoons', path: '/shop/spoons' },
-    { name: 'Bowls', path: '/shop/bowls' }
+    { name: 'All', category: 'all' },
+    { name: 'Cutting Boards', category: 'boards' },
+    { name: 'Serving Trays', category: 'trays' },
+    { name: 'Coasters', category: 'coasters' },
+    { name: 'Laddles', category: 'laddles' },
+    { name: 'Holders', category: 'holders' },
+    { name: 'Spoons', category: 'spoons' },
+    { name: 'Bowls', category: 'bowls' }
   ]
   return (
-    <div className='overflow-x-scroll sm:overflow-x-hidden whitespace-nowrap pt-[85px] sm:pt-[100px] relative z-10 '>
+    <div className='overflow-x-scroll sm:overflow-x-hidden whitespace-nowrap pt-[85px] sm:pt-[100px] relative z-10'>
       {categories.map((category, index) => (
-        <Link
-          href={category.path}
+        <button
+          onClick={() => loadCategory(category.category)}
           key={index}
-          className='text-[var(--primary-color)] font-semibold text-lg hover:text-[var(--secondary-color)] transition duration-300 text-nowrap'
+          className='text-[var(--primary-color)] font-semibold text-lg hover:text-[var(--secondary-color)] transition duration-300 text-nowrap cursor-pointer'
         >
           {category.name}
           {index !== categories.length - 1 && <span className='mx-2'>|</span>}
-        </Link>
+        </button>
       ))}
     </div>
   )
