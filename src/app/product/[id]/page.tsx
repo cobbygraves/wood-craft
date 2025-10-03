@@ -29,7 +29,7 @@ export default function ProductDetails() {
   }, [id])
   return (
     <div className='mt-[100px] sm:mt-[150px] text-2xl px-5 mb-5'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-20 sm:gap-x-5'>
         <div className=' justify-items-center'>
           <div className='relative w-full sm:w-[80%] h-[70vh] sm:h-[50vh] xl:h-[70vh]'>
             <Image
@@ -45,7 +45,7 @@ export default function ProductDetails() {
 
         <div className='flex items-center'>
           <div className=' space-y-4.5'>
-            <p className='text-4xl sm:text-7xl mb-4 font-extrabold text-[var(--primary-color)]'>
+            <p className='text-4xl sm:text-7xl mb-4 font-extrabold text-[var(--primary-color)] mt-5 sm:mt-0'>
               {product?.name}
             </p>
             <p className='text-xl font-semibold'>${product?.price}</p>
