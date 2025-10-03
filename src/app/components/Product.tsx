@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface Props {
   id?: string | number
@@ -13,6 +15,7 @@ interface Props {
   className?: string
   // optional variant for semantics; not strictly required by rendering logic
   variant?: 'large' | 'medium' | 'small'
+  handleClick: (id: string | number | undefined) => void
 }
 
 function Product({
@@ -23,28 +26,48 @@ function Product({
   price,
   description,
   className = '',
-  variant = 'medium'
+  variant = 'medium',
+  handleClick
 }: Props) {
+  const pathname = usePathname() || '/'
+
   return (
     // The wrapper is a card: image on top, caption below. BentoGrid controls the grid spans.
     <div
       className={`flex flex-col h-full w-full bg-white overflow-hidden ${className} `}
     >
       {/* Image area */}
-      <Link
-        href={`product/${id}`}
-        className='relative w-full flex-1 min-h-[6rem] bg-gray-100 cursor-pointer'
-      >
-        <Image
-          src={`/${url}`}
-          alt={alt}
-          fill
-          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
-          className='object-cover transition-transform duration-300 group-hover:scale-105'
-          priority={variant === 'large'}
-        />
-        <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-7'></div>
-      </Link>
+      {pathname === '/shop' ? (
+        <Link
+          href={`product/${id}`}
+          className='relative w-full flex-1 min-h-[6rem] bg-gray-100 cursor-pointer'
+        >
+          <Image
+            src={`/${url}`}
+            alt={alt}
+            fill
+            sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            priority={variant === 'large'}
+          />
+          <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-7'></div>
+        </Link>
+      ) : (
+        <button
+          className='relative w-full flex-1 min-h-[6rem] bg-gray-100 cursor-pointer'
+          onClick={() => handleClick(id)}
+        >
+          <Image
+            src={`/${url}`}
+            alt={alt}
+            fill
+            sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            priority={variant === 'large'}
+          />
+          <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-7'></div>
+        </button>
+      )}
 
       {/* Caption area */}
       <div className='py-2 bg-white text-left px-1'>

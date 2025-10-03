@@ -4,10 +4,15 @@ import { Product as IProduct } from '../models/interfaces'
 
 interface Props {
   products: IProduct[]
+  handleClick: (id: string | number | undefined) => void
   columns?: number
 }
 
-export default function BentoGrid({ products, columns = 4 }: Props) {
+export default function BentoGrid({
+  products,
+  columns = 4,
+  handleClick
+}: Props) {
   const pattern = [
     { c: 2, r: 2 }, // large
     { c: 1, r: 1 }, // small
@@ -43,6 +48,7 @@ export default function BentoGrid({ products, columns = 4 }: Props) {
               alt={p.name ?? p.name}
               name={p.name}
               description={p.description}
+              handleClick={handleClick}
               price={p.price}
               variant={
                 pattern[i % pattern.length].c >= 2 &&
