@@ -24,7 +24,7 @@ export const Shop = () => {
 
       <div className='flex flex-wrap'>
         <main className='container mx-auto py-8'>
-          <BentoGrid products={items} />
+          <BentoGrid products={items} handleClick={(id) => console.log(id)} />
         </main>
       </div>
     </div>
