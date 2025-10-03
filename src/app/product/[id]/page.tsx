@@ -30,8 +30,8 @@ export default function ProductDetails() {
   return (
     <div className='mt-[100px] sm:mt-[150px] text-2xl px-5 mb-5'>
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-20 sm:gap-x-5'>
-        <div className=' justify-items-center'>
-          <div className='relative w-full sm:w-[80%] h-[70vh] sm:h-[50vh] xl:h-[70vh]'>
+        <div>
+          <div className='relative w-full sm:w-[90%] h-[70vh] sm:h-[50vh] xl:h-[70vh]'>
             <Image
               src={`/${product?.image}`}
               alt='product-image'
@@ -61,7 +61,7 @@ export default function ProductDetails() {
         <p className='text-2xl font-semibold text-[var(--primary-color)] mt-7'>
           Suggested Items
         </p>
-        <main className='container mx-auto py-8'>
+        <main className='container py-7'>
           <BentoGrid products={suggestedItems} handleClick={handleSuggestion} />
         </main>
       </div>
