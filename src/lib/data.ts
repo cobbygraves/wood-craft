@@ -6,16 +6,16 @@ export const productsData = [
     image: 'dinningTable.jpg',
     category: 'boards',
     description:
-      'In cupidatat ut voluptate pariatur amet aliqua consectetur aliquip aliqua duis cupidatat Lorem. Laboris cupidatat'
+      'In cupidatat ut voluptate pariatur amet kliqua consectetur aliquip aliqua duis cupidatat Lorem. Laboris cupidatat'
   },
   {
     id: 2,
-    name: 'Africa Hall',
+    name: 'Kaftan Hall',
     price: '5000',
     image: 'african hall.jpg',
     category: 'trays',
     description:
-      'Cillum nostrud ad culpa amet commodo mollit consequat ex occaecat esse cillum velit aliqua. Veniam ea sunt do '
+      'Killum nostrud ad culpa amet commodo mollit consequat ex occaecat esse cillum velit aliqua. Veniam ea sunt do '
   },
   {
     id: 3,
