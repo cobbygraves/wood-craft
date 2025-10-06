@@ -5,6 +5,7 @@ import { productsData } from '@/lib/data'
 import BentoGrid from '@/app/components/bento-grid'
 import { Product } from '@/app/models/interfaces'
 import { useParams, useRouter } from 'next/navigation'
+import { UserFormDialog } from '@/app/components/user-form-dialog'
 
 export default function ProductDetails() {
   const [product, setProduct] = useState<undefined | Product>(undefined)
@@ -50,9 +51,10 @@ export default function ProductDetails() {
             </p>
             <p className='text-xl font-semibold'>${product?.price}</p>
             <p className='w-full sm:w-3/4'>{product?.description}</p>
-            <button className='bg-[var(--primary-color)] text-white py-2 px-4 hover:bg-[var(--secondary-color)] cursor-pointer text-xl'>
+            {/* <button className='bg-[var(--primary-color)] text-white py-2 px-4 hover:bg-[var(--secondary-color)] cursor-pointer text-xl'>
               Request Quote
-            </button>
+            </button> */}
+            <UserFormDialog productName={product?.name} />
           </div>
         </div>
       </div>
