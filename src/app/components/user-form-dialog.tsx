@@ -13,12 +13,14 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { ChangeEvent } from 'react'
+import { sendContactForm } from '@/lib/utils'
 
 interface Props {
   productName: string | undefined
+  image: string | undefined
 }
 
-export function UserFormDialog({ productName }: Props) {
+export function UserFormDialog({ productName, image }: Props) {
   const [showForm, setShowForm] = useState(false)
   const [name, setName] = useState('')
   const [isNameError, setIsNameError] = useState(false)
@@ -43,7 +45,16 @@ export function UserFormDialog({ productName }: Props) {
       setIsLocationError(true)
       return
     }
-    console.log('Product: ', productName)
+
+    sendContactForm({
+      name,
+      email,
+      phone,
+      location,
+      product: productName ?? '',
+      image: image ?? ''
+    })
+
     setShowForm(false)
     setName('')
     setEmail('')
