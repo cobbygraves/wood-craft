@@ -8,7 +8,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { UserFormDialog } from '@/app/components/user-form-dialog'
 
 export default function ProductDetails() {
-  const [product, setProduct] = useState<undefined | Product>(undefined)
+  const [product, setProduct] = useState<Product | null>(null)
   const params = useParams()
   const router = useRouter()
   const id = String(params?.id ?? '')
@@ -26,7 +26,7 @@ export default function ProductDetails() {
 
   useEffect(() => {
     const selectedProduct = productsData.find((item) => String(item.id) === id)
-    setProduct(selectedProduct)
+    setProduct(selectedProduct ?? null)
   }, [id])
   return (
     <div className='mt-[100px] sm:mt-[150px] text-2xl px-5 mb-5'>
@@ -54,7 +54,10 @@ export default function ProductDetails() {
             {/* <button className='bg-[var(--primary-color)] text-white py-2 px-4 hover:bg-[var(--secondary-color)] cursor-pointer text-xl'>
               Request Quote
             </button> */}
-            <UserFormDialog productName={product?.name} />
+            <UserFormDialog
+              productName={product?.name}
+              image={product?.image}
+            />
           </div>
         </div>
       </div>

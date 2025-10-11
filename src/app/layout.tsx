@@ -21,13 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      {/* <link
-        rel='preload'
-        href='/fonts/Monument.otf'
-        as='font'
-        type='font/otf'
-        crossOrigin='anonymous'
-      /> */}
       <body className={`${montserrat.className} antialiased`}>
         <DesktopNavbar />
         <MobileNavbar />
