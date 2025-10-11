@@ -1,3 +1,4 @@
+import Error from 'next/error'
 import { NextRequest, NextResponse } from 'next/server'
 
 import nodemailer from 'nodemailer'
@@ -67,7 +68,10 @@ export async function POST(req: NextRequest) {
     })
 
     return NextResponse.json({ success: true }, { status: 200 })
-  } catch (err: any) {
-    return NextResponse.json({ message: err.message }, { status: 400 })
+  } catch (err: unknown) {
+    return NextResponse.json(
+      { message: 'Failed to send message' },
+      { status: 400 }
+    )
   }
 }
