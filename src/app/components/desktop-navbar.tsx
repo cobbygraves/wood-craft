@@ -28,9 +28,14 @@ function DesktopNavbar() {
         >
           <Link href='/shop'>SHOP</Link>
         </li>
-        {/* <li>
-          <a href='#'>SERVICES</a>
-        </li> */}
+        <li
+          className={`${
+            pathname.startsWith('/services') &&
+            'px-1 border-b border-b-[var(--secondary-color)]'
+          }`}
+        >
+          <a href='/services'>SERVICES</a>
+        </li>
         <li
           className={`${
             pathname.startsWith('/about') &&
