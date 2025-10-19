@@ -111,15 +111,23 @@ export const productsData = [
 
 export const servicesData = [
   {
-    title: 'Custom Heirloom Furniture',
-    description: 'All antique furniture starts as new furniture. From tables to desks to beds and everything in between, each handcrafted build is custom to your specifications. Every board is handpicked to ensure each item can someday be passed down to the next generation.'
+    title: 'Bespoke Furniture',
+    description:
+      'Legacy Furniture doesn’t start as antiques — it begins with intention. Each piece, whether a sofa, table, desk, or bed, is handcrafted to reflect your unique vision. Every board is carefully selected and shaped to ensure your furniture stands the test of time, becoming an heirloom that tells your story for generations.'
   },
   {
-    title: 'Kitchen Accessories',
-    description: 'Growing up cooking, I had and have a lot of history with kitchen items such as cutting boards, charcuterie boards, knife blocks, utensil boxes, and so much more. Using that experience, I constantly work on refining this craft to blend art and functionality to introduce to your kitchen.'
+    title: 'Echoes of Home',
+    description:
+      'A collection of thoughtfully made wooden goods — from game boards and pen holders to jewelry boxes and picture frames. Each item is designed to blend beauty and function, adding character to the quiet corners of your home. Built to be used, cherished, and remembered — everyday pieces that echo the heart of where we live.'
   },
   {
-    title: 'Custom Epoxy Woodcraft',
-    description: 'Sometimes adding a little colorful flair can really bring out the character in wood and create an incredibly unique look. Epoxy can add that extra level of individuality to make your piece stand in a class by itself.'
+    title: 'Culinary Accessories',
+    description:
+      'They say the way to the heart is through food — and the tools that help make it should carry just as much warmth as the meal itself . With roots in tradition and hands-on craft, each piece — from cutting boards and charcuterie slabs to knife blocks and utensil holders — is shaped with intention.'
+  },
+  {
+    title: 'Epoxy Woodworks',
+    description:
+      'A splash of vibrant color can awaken the natural soul of wood, revealing its hidden stories and timeless beauty. Epoxy weaves through the grain like liquid artistry, transforming each piece into a singular expression of creativity—where nature and imagination intertwine in perfect harmony.'
   }
-];
+]
