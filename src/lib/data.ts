@@ -108,3 +108,18 @@ export const productsData = [
       'Tempor et sint minim aute amet. Consequat ut ullamco duis ut mollit et tempor tempor Lorem duis. Eu duis tempor enim duis'
   }
 ]
+
+export const servicesData = [
+  {
+    title: 'Custom Heirloom Furniture',
+    description: 'All antique furniture starts as new furniture. From tables to desks to beds and everything in between, each handcrafted build is custom to your specifications. Every board is handpicked to ensure each item can someday be passed down to the next generation.'
+  },
+  {
+    title: 'Kitchen Accessories',
+    description: 'Growing up cooking, I had and have a lot of history with kitchen items such as cutting boards, charcuterie boards, knife blocks, utensil boxes, and so much more. Using that experience, I constantly work on refining this craft to blend art and functionality to introduce to your kitchen.'
+  },
+  {
+    title: 'Custom Epoxy Woodcraft',
+    description: 'Sometimes adding a little colorful flair can really bring out the character in wood and create an incredibly unique look. Epoxy can add that extra level of individuality to make your piece stand in a class by itself.'
+  }
+];
