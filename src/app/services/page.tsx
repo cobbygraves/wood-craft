@@ -23,7 +23,7 @@ export default function Services() {
       <div className='w-full  p-16'>
         {/* Subheading: "What we offer" */}
         <div className='text-center mb-16 md:mb-20'>
-          <h2 className='text-4xl md:text-5xl text-[var(--primary-color)]'>Here's how we help you !</h2>
+          <h2 className='text-4xl md:text-5xl text-[var(--primary-color)]'>Here&apos;s how we help you!</h2>
         </div>
 
         {/* Services Grid Layout */}
