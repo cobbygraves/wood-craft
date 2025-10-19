@@ -10,24 +10,24 @@ export default function Services() {
         style={{ backgroundImage: "url('services-banner.jpg')" }}
       >
       
-        {/* <div className='absolute left-0 top-0 h-full flex'>
+        <div className='absolute left-0 top-20 sm:top-30 h-full flex'>
         
-          <div className='w-[150px] md:w-[250px] h-full bg-cover bg-center p-6 md:p-8 flex items-start'>
-            <h1 className='text-white text-3xl md:text-5xl font-semibold'>
+          <div className=' h-full bg-cover bg-center p-6 md:p-8 flex items-start'>
+            <h1 className='text-white text-5xl md:text-7xl font-semibold'>
               Our Services
             </h1>
           </div>
-        </div> */}
+        </div>
       </div>
 
-      <div className='w-full  p-16'>
+      <div className='w-full px-5 py-16 sm:px-16'>
         {/* Subheading: "What we offer" */}
         <div className='text-center mb-16 md:mb-20'>
           <h2 className='text-4xl md:text-5xl text-[var(--primary-color)]'>Here&apos;s how we help you!</h2>
         </div>
 
         {/* Services Grid Layout */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-7'>
           
 
           {
