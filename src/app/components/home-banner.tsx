@@ -43,12 +43,12 @@ export default function HomeBanner() {
 
   return (
     <div className='w-[85%] lg:w-full flex flex-col items-center justify-center sm:justify-start mt-0 sm:mt-[13rem] relative xl:bottom-24 h-full'>
-      <div className=' mb-5 px-5 flex font-extralight text-xl sm:text-[1.7rem] text-center sm:w-2/3 xl:w-1/2'>
+      <div className=' mb-5 px-5 flex font-extralight text-xl sm:text-[1.5rem] text-center sm:w-2/3 xl:w-1/2'>
         {messages[active].toUpperCase()}
       </div>
       <Carousel items={imagesItems} setMessage={handleActiveMsg} />
 
-      <div className='flex justify-center gap-2 items-center mt-12 w-full'>
+      <div className='flex justify-center gap-2 items-center mt-10 w-full'>
         <Link
           href='/shop'
           className='bg-[var(--primary-color)] w-fit text-[var(--background-color)] hover:bg-[var(--secondary-color)] transition duration-300 cursor-pointer text-center py-1 px-3 border-2 border-[var(--primary-color)] hover:border-[var(--secondary-color)] shadow-[0_10px_10px_#00000030] drop-shadow'

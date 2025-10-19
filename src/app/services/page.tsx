@@ -3,7 +3,7 @@ import { servicesData } from '@/lib/data'
 // import ServiceCard from '../components/service-card'
 export default function Services() {
   return (
-   <div className="services-page">
+   <div>
 
       {/* SECTION 1: HERO BANNER 
         This uses a relative container with an absolute-positioned overlay 
@@ -27,9 +27,6 @@ export default function Services() {
               Our Services
             </h1>
           </div>
-
-          {/* Panel 2: Dark separator bar */}
-          <div className="w-4 md:w-8 h-full bg-black"></div>
         </div>
       </div>
 
