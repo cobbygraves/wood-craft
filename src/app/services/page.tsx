@@ -9,9 +9,7 @@ export default function Services() {
         // You MUST replace this with your path to the main wood slab image
         style={{ backgroundImage: "url('services-banner.jpg')" }}
       >
-      
         <div className='absolute left-0 top-20 sm:top-30 h-full flex'>
-        
           <div className=' h-full bg-cover bg-center p-6 md:p-8 flex items-start'>
             <h1 className='text-white text-5xl md:text-7xl font-semibold'>
               Our Services
@@ -23,24 +21,23 @@ export default function Services() {
       <div className='w-full px-5 py-16 sm:px-16'>
         {/* Subheading: "What we offer" */}
         <div className='text-center mb-16 md:mb-20'>
-          <h2 className='text-4xl md:text-5xl text-[var(--primary-color)]'>Here&apos;s how we help you!</h2>
+          <h2 className='text-4xl md:text-5xl text-[var(--primary-color)]'>
+            Here&apos;s how we help you!
+          </h2>
         </div>
 
         {/* Services Grid Layout */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-7'>
-          
-
-          {
-            servicesData.map(serviceData=> <div key={serviceData.title}>
-            <h3 className='text-3xl font-semibold mb-4 text-center text-[var(--primary-color)]'>
-              {serviceData.title}
-            </h3>
-            <p className='text-lg text-[var(--secondary-color)] leading-relaxed max-w-md mx-auto'>
-              {serviceData.description}
-            </p>
-          </div>)
-          }
-          
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-11'>
+          {servicesData.map((serviceData) => (
+            <div key={serviceData.title}>
+              <h3 className='text-3xl font-semibold mb-4 text-center text-[var(--primary-color)]'>
+                {serviceData.title}
+              </h3>
+              <p className='text-lg text-[var(--secondary-color)] leading-relaxed max-w-md mx-auto'>
+                {serviceData.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
