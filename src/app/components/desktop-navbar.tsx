@@ -61,18 +61,8 @@ function DesktopNavbar() {
             </button>
           </div>
         )}
-
-        {/* <div className='flex items-center gap-x-3'>
-          <div className='flex items-center gap-x-1'>
-            <a href='#'>
-             
-              <LuShoppingCart size='2.5rem' />
-            </a>
-            <span className='relative bottom-1.5'>2</span>
-          </div>
-        </div> */}
         {pathname !== '/shop' && (
-          <div className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[1.2rem] flex items-center gap-x-1'>
+          <div className='font-bold text-[var(--primary-color)]  px-3 py-2 text-[1.2rem] flex items-center gap-x-1'>
             <FaPhoneVolume /> <span>(+233) 241 985 898</span>
           </div>
         )}
