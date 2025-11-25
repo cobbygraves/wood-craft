@@ -131,3 +131,50 @@ export const servicesData = [
       'A splash of vibrant color can awaken the natural soul of wood, revealing its hidden stories and timeless beauty. Epoxy weaves through the grain like liquid artistry, transforming each piece into a singular expression of creativity—where nature and imagination intertwine in perfect harmony.'
   }
 ]
+
+export const portfolioData = [
+  {
+    id: 1,
+    image: 'one.jpg'
+  },
+  {
+    id: 2,
+    image: 'two.jpg'
+  },
+  {
+    id: 3,
+    image: 'three.jpg'
+  },
+  {
+    id: 4,
+    image: 'four.jpg'
+  },
+  {
+    id: 5,
+    image: 'five.jpg'
+  },
+  {
+    id: 6,
+    image: 'six.jpg'
+  },
+  {
+    id: 7,
+    image: 'seven.jpg'
+  },
+  {
+    id: 8,
+    image: 'eight.jpg'
+  },
+  {
+    id: 9,
+    image: 'nine.jpg'
+  },
+  {
+    id: 10,
+    image: 'ten.jpg'
+  },
+  {
+    id: 11,
+    image: 'eleven.jpg'
+  }
+]
