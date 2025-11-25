@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { CiMenuBurger } from 'react-icons/ci'
-import { AiOutlineClose } from 'react-icons/ai'
 import { FaPhoneVolume } from 'react-icons/fa6'
 import { usePathname } from 'next/navigation'
 import { CiSearch } from 'react-icons/ci'
@@ -31,7 +30,6 @@ export const MobilieNavbar = () => {
         } bg-white`}
       >
         <Link href='/'>
-          {/* <img src='logo.png' alt='KCrafts Logo' className='h-20 w-20' /> */}
           <Image
             className=''
             src={'/logo.png'}
@@ -40,7 +38,7 @@ export const MobilieNavbar = () => {
             height={50}
           />
         </Link>
-        <div className='flex items-center gap-2 justify-between'>
+        <div className='flex items-center gap-3 justify-between'>
           <div className='flex justify-end items-center'>
             {pathname === '/shop' && (
               <div className='flex gap-x-2 items-center border-1 border-[var(--primary-color)] w-[80%]'>
@@ -55,15 +53,8 @@ export const MobilieNavbar = () => {
               </div>
             )}
           </div>
-          {/* <div className='flex items-center gap-1'>
-            <LuShoppingCart size='2.5rem' />
-            <span className='relative bottom-1.5'>2</span>
-          </div> */}
-          {pathname !== '/shop' && (
-            <div className='font-bold text-[var(--primary-color)] border border-[var(--primary-color)] px-3 py-2 text-[0.9rem] flex items-center gap-1'>
-              <FaPhoneVolume /> <span>(+233) 241 985 898</span>
-            </div>
-          )}
+
+          <CiMenuBurger size={30} />
         </div>
       </div>
     </div>
